@@ -7,7 +7,7 @@ int main() {
     int contador = 0;
 
     printf("Introduza a frase: ");
-    fgets(frase, sizeof(frase), stdin);
+    scanf(" %[^\n]", frase);
 
     printf("Introduza o carácter a contabilizar: ");
     scanf(" %c", &caractere);
