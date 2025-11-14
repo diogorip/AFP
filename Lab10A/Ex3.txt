@@ -1,0 +1,12 @@
+Output:
+15
+20
+25
+30
+40
+50
+20
+25
+30
+38
+endereço de memória fora do array

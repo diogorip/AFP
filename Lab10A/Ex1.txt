@@ -1,0 +1,69 @@
+a)
+
+main() {
+    int y, *p, x;          // declara 3 variáveis: y e x são ints normais, p é ponteiro para int
+    y = 0;                 // y fica com 0
+    p = &y;                // p aponta para y (guarda o endereço de y)
+    x = *p;                // x vai buscar o valor que está em p, ou seja x = 0
+    x= 4;                  // x passa a 4
+    (*p)++;                // incrementa o que está apontado por p, logo y passa a 1
+    x--;                   // x decrementa, fica 3
+    (*p) += x;             // soma x ao valor apontado por p, então y = 1 + 3 = 4
+    printf("y = %d\n", y);
+}
+
+Output: y = 4
+
+
+b)
+
+main() {
+    int *pont, cont, val;  // pont é ponteiro, cont e val são ints normais
+    cont = 100;            // cont = 100
+    pont = &cont;          // pont aponta para cont
+    val = *pont;           // val vai buscar o valor apontado por pont, fica 100
+    printf("%d", val);
+}
+
+Output: 100
+
+
+c)
+
+main() {
+    int x,y, *px, *py;     // x e y são ints, px e py são ponteiros
+    x = 5;                 // x = 5
+    px = &x;               // px aponta para x
+    py = px;               // py copia o endereço de px, agora ambos apontam para x
+    y = *py;               // y vai buscar o valor apontado por py, que é x, logo y = 5
+    printf("%d %d", x, y);
+}
+
+Output: 5 5
+
+
+d)
+
+main() {
+    int x, y, *px, **py;   // x e y são ints, px é ponteiro, py é ponteiro DUPLO
+    x = 5;                 // x = 5
+    px = &x;               // px aponta para x
+    py = &px;              // py aponta para px (ponteiro de ponteiro)
+    y = **py;              // desreferencia 2 vezes: *py dá px, **py dá o valor de x, logo y = 5
+    printf("%d %d", x, y);
+}
+
+Output: 5 5
+
+
+e)
+
+main() {
+    char a, b, *p;         // a e b são chars, p é ponteiro para char
+    b = 'c';               // b recebe o caracter 'c'
+    p = &a;                // p aponta para a
+    *p = b;                // coloca o valor de b no sítio apontado por p, ou seja a = 'c'
+    printf("%c", a);
+}
+
+Output: c

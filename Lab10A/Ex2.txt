@@ -1,0 +1,20 @@
+int arr[5] = { 3, 8, 2, 10, 5 };
+int *p = NULL;
+
+a) Colocar em p o endereço de arr
+p = arr;
+
+b) Imprimir o conteúdo das posições 0 e 2
+printf("%d\n", *p);       // posição 0
+printf("%d\n", *(p+2));   // posição 2
+
+c) Alterar o valor do índice 4 para 9
+*(p+4) = 9;
+
+d) Imprimir o conteúdo do índice 4
+printf("%d\n", *(p+4));
+
+e) Imprimir todo o array com aritmética de ponteiros
+for(int i = 0; i < 5; i++) {
+    printf("%d\n", *(p+i));
+}
